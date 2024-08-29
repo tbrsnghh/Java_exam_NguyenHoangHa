@@ -4,13 +4,13 @@ public class DanhSachVatPham {
     List<VatPham> dsVatPham;
     public DanhSachVatPham() {
         dsVatPham = new ArrayList<VatPham>();
+    }
+    public void nhapVatPham() {
         dsVatPham.add(new BuaThan());
         dsVatPham.add(new BaoTay());
         dsVatPham.add(new HonDa());
         dsVatPham.add(new Riu());
         dsVatPham.add(new Gay());
-    }
-    public void nhapVatPham() {
         System.out.println("Mời bạn nhập các vật phẩm (5 vật phẩm) mà Spon cần thu hoạch.");
         for (VatPham vp : dsVatPham) {
             System.out.println("----------\nVật phẩm: " + vp.getTenVp());
@@ -18,10 +18,15 @@ public class DanhSachVatPham {
         }
     }
     public void inVatPham() {
-        for(VatPham vp : dsVatPham){
-            System.out.println("----------");
-            System.out.println(vp.xuat());
+        if(dsVatPham.isEmpty()) {
+            System.out.println("Bạn cần nhập thông tin vật phẩm!");
+        }else{
+            for(VatPham vp : dsVatPham){
+                System.out.println("----------");
+                System.out.println(vp.xuat());
+            }
         }
+
     }
     public void vpDatNhat() {
         Optional<VatPham> vatPhamDatNhat = dsVatPham.stream()
