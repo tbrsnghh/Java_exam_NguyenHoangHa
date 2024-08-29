@@ -15,6 +15,11 @@ public class VatPham {
         this.heSoSucManh = heSoSucManh;
         this.heSoVangQuiDoi = heSoVangQuiDoi;
     }
+
+    public String getTenVp() {
+        return tenVp;
+    }
+
     public void nhap(){
         Scanner sc = new Scanner(System.in);
         System.out.print("Chỉ số sức mạnh: ");

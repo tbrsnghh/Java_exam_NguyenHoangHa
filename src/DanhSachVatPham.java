@@ -12,8 +12,8 @@ public class DanhSachVatPham {
     }
     public void nhapVatPham() {
         System.out.println("Mời bạn nhập các vật phẩm (5 vật phẩm) mà Spon cần thu hoạch.");
-
         for (VatPham vp : dsVatPham) {
+            System.out.println("----------\nVật phẩm: " + vp.getTenVp());
             vp.nhap();
         }
     }
